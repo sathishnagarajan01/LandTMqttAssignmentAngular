@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <button routerLink="/home" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>west</mat-icon>
+    </button>
+    <span>Book Details</span>
+</mat-toolbar>
+<div class="book-details">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{selectedBook.bookName}}</mat-card-title>
+            <mat-card-subtitle class="author">{{selectedBook.authorName}}</mat-card-subtitle>
+            <mat-card-subtitle>{{selectedBook.publishedAt}}</mat-card-subtitle>
+        </mat-card-header>
+        <img src="{{'data:image/jpg;base64,' + selectedBook.fullImage}}" mat-card-image>
+        <mat-card-content>
+            <p class="text-justify">{{selectedBook.bookDescription}}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button><mat-icon>local_library</mat-icon> Read Now</button>
+            <button mat-button><mat-icon>shopping_basket</mat-icon> Purchase</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,20 @@
+.book-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    mat-card {
+        mat-card-header {
+            .author {
+                cursor: pointer;
+                display: inline-block;
+            }
+        }
+        img {
+            max-height: 38vh;
+        }
+    }
+}
+.text-justify {
+    text-align: justify;
+}
